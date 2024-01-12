@@ -5,7 +5,7 @@
   <style>
     body {
       background-color: #000000;
-      color: #fefd57; /*Adjusted for better contrast*/
+      color: #fefd57;
       font-family: 'Courier', monospace;
       display: flex;
       flex-direction: column;
@@ -16,24 +16,39 @@
       padding: 0;
     }
     a {
+      box-sizing: border-box; /* added box-sizing so the element sizes don't fluctuate */
       background-color: #212121;
-      color: #fefd57; /*Adjusted for better contrast*/
+      color: #fefd57;
       margin: 10px;
       padding: 10px 20px;
       text-decoration: none;
       border-radius: 4px;
-      box-shadow: 0 0 10px #fefd57; /*Adjusted for better contrast*/
+      box-shadow: 0 0 10px #fefd57;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       transition: transform 0.1s;
+      animation: pulse 2s infinite; /* added animation */
+      border: 2px solid #fefd57; /* added default border */
     }
     a:hover {
       transform: scale(1.1);
     }
+    /* added pulse animation */
+    @keyframes pulse {
+      0% {
+        border-width: 2px;
+      }
+      50% {
+        border-width: 6px;
+      }
+      100% {
+        border-width: 2px;
+      }
+    }
   </style>
 </head>
 <body>
-  <nav aria-label="Movie Websites"> <!-- Indicate this is a navigation section -->
+  <nav aria-label="Movie Websites">
     <a href="https://watchmovies123.cyou">WatchMovies123</a>
     <a href="https://fmovies.cyou">Backup1</a>
     <a href="https://cinehub.wtf">CineHub Movies</a>
